@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, RockExplorer!</string>
+    <string name="app_name">资源管理器</string>
+    
+    <string name="str_home">主页</string>
+    <string name="str_level_up">上层</string>
+    <string name="str_multi_choice">多选</string>
+    <string name="str_editor">编辑</string>
+    <string name="str_search">搜索</string>
+    <string name="str_folder_back">上个</string>
+    <string name="str_folder_next">下个</string>
+    <string name="str_switch_windows">查看</string>
+    <string name="str_sort">排序</string>
+    <string name="str_settingt">设置</string>
+    
+    <string name="edit_copy">复制</string>
+    <string name="edit_delete">删除</string>
+    <string name="edit_move">移动</string>
+    <string name="edit_paste">粘贴</string>
+    <string name="edit_rename">重命名</string>
+    <string name="edit_bluetooth">发送</string>
+    <string name="edit_shotcut">创建桌面快捷方式</string>
+    
+    <string name="str_del">删除</string>    
+    <string name="str_sure_del">确认删除</string>
+    <string name="str_sure_del_ask">您确认要删除?</string>
+    
+    <string name="str_cancel">取消</string>
+    <string name="str_OK">确定</string>
+    
+    <!-- rename -->
+    <string name="str_rename_notice">注意！</string>
+    <string name="str_rename_file_exist">文件已经存在，是否要覆盖？</string>
+    <string name="str_rename_text">更改文件名为：</string>
+    
+    <!-- copying dialog -->
+    <string name="str_copyingtitle">请稍等...</string>
+	<string name="str_copyingcontext">拷贝中...</string>
+	<string name="str_copystop">停止拷贝</string>
+	<string name="str_source">来源: </string>
+    <string name="str_target">目标: </string>
+
+    <string name="str_delcontext">正在删除文件...</string>   
+ 
+	<!-- copy recover dialog -->
+	<string name="copy_revocer_text">  已存在，是否覆盖？</string>
+    <string name="copy_revocer_yes">覆盖</string>
+    <string name="copy_revocer_no">跳过</string>
+    
+	<!-- opening dialog -->
+    <string name="str_openingtitle">请稍等...</string>
+	<string name="str_openingcontext">正在打开...</string>
+	<string name="str_openstop">停止打开</string>
+	
+	<!-- copy error -->
+    <string name="err_target_same">不能复制文件到相同路径！</string>
+    <string name="err_target_child">目标路径错误！</string>
+    
+	<string name="str_menu_app_manage">应用程序管理</string>
+	<string name="str_menu_tool_hide">隐藏工具条</string>
+    <string name="str_menu_tool_show">显示工具条</string>
+	
+	<string name="str_sdcard_umount">SD卡已被卸载</string>
+
+        <string name="str_flash_umount">内部存储已被卸载</string>
+	
+	<string name="str_usb1_umount">USB已被卸载</string>
+    <string name="rename_error">文件名中包含特殊字符，文件名不能被修改</string>
+    <string name="rename_null">文件名为空，文件名不能被修改</string>
+    <string name="err_not_free_space">没有足够的空间!</string>
+
+    <string name="str_isplaymusic">正在播放,请暂停后再删除!</string>
+
+    <string name="noapp">没有应用程序可以打开这个文件!</string>
+    <string name="notification_copy_dialog">是否在后台运行拷贝操作 ? </string>
+    <string name="copy_finish">拷贝结束!</string>
+<string name="str_mkdir">新建文件夹</string>
+<string name="str_newdir_text">请输入文件夹名称 :</string>
+<string name="samename_error">该文件夹已存在!</string>
+
+<string name="no_apps_to_send">没有应用程序匹配发送功能.</string>
+<string name="delete_finish">删除成功</string>
+<string name="file_does_not_exist">文件不存在</string>
+</resources>

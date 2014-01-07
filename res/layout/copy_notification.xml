@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+    	android:orientation="horizontal"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content">
+	<ImageView
+		android:paddingLeft = "5dip"
+		android:layout_width="30dip"
+		android:layout_height="30dip"
+		android:src="@mipmap/icon"/>
+    	<TextView
+	    	android:id="@+id/copy_notification_title"
+	    	android:textStyle="bold"
+		android:textSize="18dip"
+		android:textColor="@color/black"
+	    	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+		android:paddingLeft = "5dip"
+	    	android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/copy_notification_progress_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+	android:textColor="@color/black"
+	android:layout_gravity="right"/>
+    <ProgressBar
+    	android:id="@+id/copy_notification_progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"/>
+</LinearLayout>

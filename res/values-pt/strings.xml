@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Explorer!</string>
+    <string name="app_name">Explorer</string>
+    
+    <string name="str_home">Home</string>
+    <string name="str_level_up">LevelUp</string>
+    <string name="str_multi_choice">Multi</string>
+    <string name="str_editor">Editor</string>
+    <string name="str_search">Search</string>
+    <string name="str_folder_back">Back</string>
+    <string name="str_folder_next">Next</string>
+    <string name="str_switch_windows">Switch</string>
+    <string name="str_sort">Sort</string>
+    <string name="str_settingt">Setting</string>
+    
+    <string name="edit_copy">Cópia</string>
+    <string name="edit_delete">Apague</string>
+    <string name="edit_move">Movimento</string>
+    <string name="edit_paste">Incolla</string>
+    <string name="edit_rename">Renomeie</string>
+    
+    <string name="str_del">Apague</string>
+    <string name="str_sure_del">Confirme apagamento</string>
+    <string name="str_sure_del_ask">Você está seguro?</string>
+    
+    <string name="str_cancel">Cancelamento</string>
+    <string name="str_OK">OK</string>
+    
+    <!-- rename -->
+    <string name="str_rename_notice">Atenção!</string>
+    <string name="str_rename_file_exist">Nome de O de existe de já de arquivo. Você quer escrever elaboradamente?</string>
+    
+    <!-- copying dialog -->
+    <string name="str_copyingtitle">Por favor espere.</string>
+	<string name="str_copyingcontext">Copiando…</string>
+	<string name="str_copystop">Pare copiagem</string>
+	<string name="str_source">Fonte: </string>
+    <string name="str_target">Objetivo: </string>
+    
+    <!-- copy error -->
+    <string name="err_target_same">Não pode copiar o arquivo ao mesmo local!</string>
+    <string name="err_target_child">Erro no caminho designado!</string>
+    
+    <!-- copy recover dialog -->
+	<string name="copy_revocer_text">Nome de O de existe de já de arquivo. Você quer escrever elaboradamente?</string>
+    <string name="copy_revocer_yes">Recover</string>
+    <string name="copy_revocer_no">Cancelamento</string>
+    
+    <!-- opening dialog -->
+    <string name="str_openingtitle">Por favor espere.</string>
+	<string name="str_openingcontext">Abrindo…</string>
+	<string name="str_openstop">Abrindo parou</string>
+    
+    <string name="str_rename_text">Renomeie:</string>
+    
+    <string name="str_menu_app_manage">Administre aplicações</string>
+    
+    <string name="str_sdcard_umount">SD foi desmontado</string>
+    
+    <string name="str_usb1_umount">O dispositivo de USB foi desmontado</string>
+    
+    <string name="str_flash_name">Memória interna</string>
+    
+    <string name="str_usb1_name">USB</string>
+    
+    <string name="str_sdcard_name">SD Cartão</string>
+    
+    <string name="rename_error">Nome de arquivo contém caráter especiais, o arquivo não está sendo modificado</string>
+    <string name="err_not_free_space">There is not enough space!</string>
+	<string name="filename">名字：</string>
+	<string name="filesize">大小：</string>
+	<string name="fileauthority ">权限：</string>
+	<string name="filemime">类型：</string>
+	<string name="fileposition">位置：</string>
+	<string name="filetime">修改时间：</string>
+	<string name="filedetails">文件详情</string>
+<string name="fileconfrim">确认</string>
+</resources>

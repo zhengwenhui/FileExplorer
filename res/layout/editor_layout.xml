@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+     
+    android:background="@drawable/popup_blue_border_4"
+
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:id="@+id/myDialogLL" >
+
+    <Button
+        android:id="@+id/edit_copy"
+        android:layout_width="300dip"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/edit_copy"
+        android:background="@android:drawable/list_selector_background"
+	android:drawableLeft="@drawable/copy"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_copy" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+
+    <Button
+        android:id="@+id/edit_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_delete"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/close_b"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_delete" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+
+    <Button
+        android:id="@+id/edit_move"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_move"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/file_sharing"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_move" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+
+    <Button
+        android:id="@+id/edit_paste"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_paste"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/paste"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_paste" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+
+    <Button
+        android:id="@+id/edit_rename"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_rename"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/rename"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_rename" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+
+    <Button
+        android:id="@+id/edit_bluetooth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_bluetooth"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/bt_share"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_bluetooth" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/panel_separator" />
+    <Button
+        android:id="@+id/edit_shotcut"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:contentDescription="@string/edit_shotcut"
+        android:background="@android:drawable/list_selector_background"
+        android:drawableLeft="@drawable/shotcut_icon"
+        android:onClick="onEditDialogClick"
+        android:singleLine="true"
+        android:text="@string/edit_shotcut" />
+
+    <Button
+        android:id="@+id/edit_cancel_btu"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:onClick="onEditDialogClick"
+        android:text="@string/str_cancel" />
+
+</LinearLayout>

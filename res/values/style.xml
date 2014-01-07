@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<!-- 
+		tool_bar sytle 
+	-->
+	<style name="tool_bar_LinearLayout">
+<!--
+		<item name="android:layout_width">0dip</item>
+		<item name="android:layout_weight">1</item>
+-->
+		<item name="android:layout_width">163dip</item>
+		<item name="android:layout_height">70dip</item>
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:layout_marginLeft">5dip</item>
+		<item name="android:orientation">vertical</item>
+	</style>
+
+	<style name="tool_bar_TextView">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">24dip</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+		<item name="android:textColor">@color/white</item>
+	</style>	
+
+	<style name="tool_bar_ImageView">
+		<item name="android:layout_width">35dip</item>
+		<item name="android:layout_height">35dip</item>
+		<item name="android:layout_gravity">center_horizontal</item>
+	</style>
+	
+	<!-- 
+		editor_layout sytle 
+	-->
+	<style name="editor_layout_LinearLayout">
+		<item name="android:layout_gravity">center_vertical|center_horizontal</item>
+		<item name="android:background">@drawable/editor_btn</item>
+		<item name="android:layout_width">200dip</item>
+		<item name="android:layout_height">2dip</item>
+		<item name="android:orientation">horizontal</item>
+	</style>
+	
+	<style name="editor_layout_ImageView">
+		<item name="android:layout_width">40dip</item>
+		<item name="android:layout_height">40dip</item>
+		<item name="android:layout_marginLeft">10dip</item>
+	</style>
+	
+	<style name="editor_layout_TextView">
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:textSize">20dip</item>
+		<item name="android:textColor">#FFF</item>
+		<item name="android:gravity">left</item>
+		<item name="android:layout_gravity">center_vertical</item>
+		<item name="android:layout_marginLeft">10dip</item>
+	</style>	
+	
+	<style name="editor_layout_Line">
+		<item name="android:layout_gravity">center_vertical|center_horizontal</item>
+		<item name="android:layout_width">200dip</item>
+		<item name="android:layout_height">wrap_content</item>
+		<item name="android:background">@drawable/panel_separator</item>
+	</style>
+
+	<style name="AppTheme" parent="android:Theme">
+        </style>
+</resources>

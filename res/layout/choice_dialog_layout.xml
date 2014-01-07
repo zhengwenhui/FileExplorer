@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+	<TextView
+		android:text="@string/notification_copy_dialog"
+		android:layout_width = "350dip"
+		android:layout_height = "100dip"
+		android:textSize="18dip"
+		android:gravity="center_horizontal|center_vertical"/>
+	<LinearLayout
+    	    android:orientation="horizontal"
+	    android:layout_width="350dip"
+	    android:layout_height="wrap_content">
+	    <Button
+	    	android:id="@+id/but_runbackground"
+	    	android:text="@string/str_OK"
+	    	android:layout_width="0dip"
+	    	android:layout_weight="1"
+	    	android:layout_height="wrap_content"/>
+	    <Button
+	    	android:id="@+id/but_cancel"
+	    	android:text="@string/str_cancel"
+	    	android:layout_width="0dip"
+	    	android:layout_weight="1"
+	    	android:layout_height="wrap_content"/>
+	</LinearLayout>
+</LinearLayout>

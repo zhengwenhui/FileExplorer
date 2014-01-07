@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dip" >
+
+    <ImageView
+        android:id="@+id/nor_image"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="8dip" />
+
+    <TextView
+        android:id="@+id/nor_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nor_image"
+        android:gravity="left"
+        android:paddingLeft="8dip"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/nor_text_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/nor_image"
+        android:gravity="left"
+        android:paddingLeft="8dip"
+        android:textColor="#ff5bb8df"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/nor_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="5dip"
+        android:layout_toRightOf="@id/nor_image"
+        android:textStyle="italic"
+	android:singleLine="true"
+        android:textColor="#858585"
+        android:textSize="14sp" >
+    </TextView>
+
+</RelativeLayout>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Explorer!</string>
+    <string name="app_name">Explorer</string>
+    
+    <string name="str_home">Home</string>
+    <string name="str_level_up">LevelUp</string>
+    <string name="str_multi_choice">Multi</string>
+    <string name="str_editor">Editor</string>
+    <string name="str_search">Search</string>
+    <string name="str_folder_back">Back</string>
+    <string name="str_folder_next">Next</string>
+    <string name="str_switch_windows">Switch</string>
+    <string name="str_sort">Sort</string>
+    <string name="str_settingt">Setting</string>
+    
+    <string name="edit_copy">Copy</string>
+    <string name="edit_delete">Delete</string>
+    <string name="edit_move">Move</string>
+    <string name="edit_paste">Paste</string>
+    <string name="edit_rename">Rename</string>
+    <string name="edit_bluetooth">Send</string>
+    <string name="edit_shotcut">Create shotcut</string>
+    
+    <string name="str_del">delete</string>
+    <string name="str_sure_del">Confirm deletion</string>
+    <string name="str_sure_del_ask">Are you sure delete?</string>
+    
+    <string name="str_cancel">Cancel</string>
+    <string name="str_OK">OK</string>
+    
+    <!-- rename -->
+    <string name="str_rename_notice">Attention!</string>
+    <string name="str_rename_file_exist">The file name is exist，do you want to cover?</string>
+    
+    <!-- copying dialog -->
+    <string name="str_copyingtitle">Please wait a moment.</string>
+	<string name="str_copyingcontext">Copying...</string>
+	<string name="str_copystop">Stop Copy</string>
+	<string name="str_source">Source: </string>
+    <string name="str_target">Target: </string>
+
+    <string name="str_delcontext">Deleting...</string>   
+ 
+    <!-- copy error -->
+    <string name="err_target_same">Cann\'t copy the file to the same path!</string>
+    <string name="err_target_child">The target path is error!</string>
+    
+    <!-- copy recover dialog -->
+	<string name="copy_revocer_text">  is exist, are you sure to recover?</string>
+    <string name="copy_revocer_yes">Recover</string>
+    <string name="copy_revocer_no">Cancel</string>
+    
+    <!-- opening dialog -->
+    <string name="str_openingtitle">Please wait…</string>
+	<string name="str_openingcontext">Opening...</string>
+	<string name="str_openstop">Opening stopped</string>
+    
+    <string name="str_rename_text">Rename to:</string>
+    
+    <string name="str_menu_app_manage">Manage applications</string>
+    <string name="str_menu_tool_hide">Hide tool bar</string>
+    <string name="str_menu_tool_show">Show tool bar</string>
+    
+    <string name="str_sdcard_umount">SD has been unmounted</string>
+
+    <string name="str_flash_umount">Internal Memory has been unmounted</string>
+    
+    <string name="str_usb1_umount">The USB device has been unmounted</string>
+    
+    <string name="str_flash_name">Internal Memory</string>
+    
+    <string name="str_usb1_name">U S B</string>
+    
+    <string name="str_sdcard_name">SD Card</string>
+    
+    <string name="rename_error">File name contains special characters, the file name is not being modified</string>
+    <string name="rename_null">File name is null, the file name is not being modified</string>
+    <string name="err_not_free_space">There is not enough space!</string>
+    <string name="str_isplaymusic">"Playing music, can not delete music files! \n Please pause music then be removed."</string>    
+    <string name="filename">名字：</string>
+    <string name="filesize">大小：</string>
+    <string name="fileauthority ">权限：</string>
+    <string name="filemime">类型：</string>
+    <string name="fileposition">位置：</string>
+    <string name="filetime">修改时间：</string>
+    <string name="filedetails">文件详情</string>
+    <string name="fileconfrim">确认</string>
+    <string name="str_mkdir">NewFolder</string>
+    <string name="str_newdir_text">Please input the folder name :</string>
+    <string name="samename_error">This folder is exist!</string>
+
+    <string name="noapp">There is no application can open this file!</string>
+    <string name="notification_copy_dialog">Copy files background ? </string>
+    <string name="copy_finish">Copy finish !</string>
+    <string name="no_apps_to_send">There is no application fits. </string>
+    <string name="delete_finish">Delete successful</string>
+    <string name="file_does_not_exist">File does not exist</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, Explorer!</string>
+    <string name="app_name">Εξερευνητής</string>
+
+    <string name="str_home">Home</string>
+    <string name="str_level_up">LevelUp</string>
+    <string name="str_multi_choice">Multi</string>
+    <string name="str_editor">Editor</string>
+    <string name="str_search">Search</string>
+    <string name="str_folder_back">Back</string>
+    <string name="str_folder_next">Next</string>
+    <string name="str_switch_windows">Switch</string>
+    <string name="str_sort">Sort</string>
+    <string name="str_settingt">Setting</string>
+    
+    <string name="edit_copy">Αντίτυπο</string>
+    <string name="edit_delete">Διαγραφή</string>
+    <string name="edit_move">Κίνηση</string>
+    <string name="edit_paste">Επικόλληση</string>
+    <string name="edit_rename">Μετονομασία</string>
+    
+    <string name="str_del">Διαγραφή</string>
+    <string name="str_sure_del">Επιβεβαιώσετε τη διαγραφή</string>
+    <string name="str_sure_del_ask">Είσαι σίγουρος;</string>
+    
+    <string name="str_cancel">Άκυρο</string>
+    <string name="str_OK">Καλά</string>
+    
+    <!-- rename -->
+    <string name="str_rename_notice">Προσοχή!</string>
+    <string name="str_rename_file_exist">Το όνομα αρχείου υπάρχει ήδη. Μετονομασία αρχείων;</string>
+    
+    <!-- copying dialog -->
+    <string name="str_copyingtitle">Παρακαλώ περιμένετε …</string>
+	<string name="str_copyingcontext">Αντιγραφή …</string>
+	<string name="str_copystop">Σταματήστε την αντιγραφή</string>
+	<string name="str_source">Πηγή:</string>
+    <string name="str_target">Target:</string>
+    
+    <!-- copy error -->
+    <string name="err_target_same">Δεν είναι δυνατή η αντιγραφή του αρχείου στην ίδια θέση.</string>
+    <string name="err_target_child">Σφάλμα στην πορεία στόχος</string>
+    
+    <!-- copy recover dialog -->
+	<string name="copy_revocer_text">  Το όνομα αρχείου υπάρχει ήδη. Θέλετε να αντικατασταθεί;</string>
+    <string name="copy_revocer_yes">Γράφοντας πάνω από …</string>
+    <string name="copy_revocer_no">Άκυρο</string>
+    
+    <!-- opening dialog -->
+    <string name="str_openingtitle">Παρακαλώ περιμένετε...</string>
+	<string name="str_openingcontext">Εγκαίνια...</string>
+	<string name="str_openstop">Άνοιγμα σταμάτησε</string>
+    
+    <string name="str_rename_text">Μετονομασία σε:</string>
+    
+    <string name="str_menu_app_manage">Διαχειριστείτε τις εφαρμογές</string>
+    
+    <string name="str_sdcard_umount">SD έχει unmounted</string>
+    
+    <string name="str_usb1_umount">Η συσκευή USB έχει unmounted</string>
+    
+    <string name="str_flash_name">Εσωτερική μνήμη</string>
+    
+    <string name="str_usb1_name">U S B</string>
+    
+    <string name="str_sdcard_name">Κάρτα SD</string>
+    
+    <string name="rename_error">Όνομα αρχείου περιλαμβάνει ειδικούς χαρακτήρες, το αρχείο δεν τροποποιούνται Όντας</string>
+    <string name="err_not_free_space">There is not enough space!</string>
+	<string name="filename">名字：</string>
+	<string name="filesize">大小：</string>
+	<string name="fileauthority ">权限：</string>
+	<string name="filemime">类型：</string>
+	<string name="fileposition">位置：</string>
+	<string name="filetime">修改时间：</string>
+	<string name="filedetails">文件详情</string>
+<string name="fileconfrim">确认</string>
+</resources>

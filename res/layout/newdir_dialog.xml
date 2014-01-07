@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical">
+  <TextView 
+    android:layout_gravity="center_vertical|left"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip"
+    android:layout_marginTop="5dip"
+    android:textSize="22sp"
+    android:text="@string/str_newdir_text"
+    android:textStyle="bold"
+    android:gravity="left">
+  </TextView>
+  <EditText
+    android:id="@+id/newdirEdit"
+    android:layout_gravity="center_vertical|center_horizontal"
+    android:layout_height="wrap_content"
+    android:layout_width="250dip"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip"
+    android:textColor="@color/white"
+    android:textSize="22sp"
+    android:autoText="false"
+    android:maxLength="255"
+    android:gravity="fill_horizontal">
+  </EditText>     
+  <LinearLayout
+	  android:layout_width="fill_parent"
+	  android:layout_height="wrap_content"
+	  android:orientation="horizontal">
+	  <Button
+	  	android:gravity="center_horizontal"
+	  	android:id="@+id/newdir_dialog_ok"
+	  	android:text="@string/str_OK"
+		android:layout_width="0dip"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:textSize="22sp" />
+	  <Button
+	  	android:gravity="center_horizontal"
+	  	android:id="@+id/newdir_dialog_cancel"
+	  	android:text="@string/str_cancel"
+		android:layout_width="0dip"
+		android:layout_weight="1"
+		android:layout_height="wrap_content"
+		android:textSize="22sp" />
+  </LinearLayout>
+</LinearLayout>

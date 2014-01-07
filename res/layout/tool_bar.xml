@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:focusable="true"
+	android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/tool_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tool_home"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/str_home"
+            android:drawableLeft="@drawable/home"
+            android:onClick="onClick"
+            android:text="@string/str_home" />
+
+        <Button
+            android:id="@+id/tool_level_up"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:contentDescription="@string/str_level_up"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/level_up"
+            android:onClick="onClick"
+            android:text="@string/str_level_up" />
+
+        <Button
+            android:id="@+id/tool_multi_choice"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:contentDescription="@string/str_multi_choice"
+            android:drawableLeft="@drawable/list"
+            android:singleLine="true"
+            android:onClick="onClick"
+            android:text="@string/str_multi_choice" />
+
+        <Button
+            android:id="@+id/tool_editor"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:contentDescription="@string/str_editor"
+            android:drawableLeft="@drawable/menu_edit"
+            android:onClick="onClick"
+            android:singleLine="true"
+            android:text="@string/str_editor" />
+
+        <Button
+            android:id="@+id/tool_new_folder"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:contentDescription="@string/str_mkdir"
+            android:drawableLeft="@drawable/new_folder"
+            android:singleLine="true"
+            android:onClick="onClick"
+            android:text="@string/str_mkdir" />
+
+        <Button
+            android:id="@+id/tool_folder_back"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:singleLine="true"
+            android:contentDescription="@string/str_folder_back"
+            android:drawableLeft="@drawable/folder_back"
+            android:onClick="onClick"
+            android:text="@string/str_folder_back" />
+
+        <Button
+            android:id="@+id/tool_folder_next"
+            android:layout_height="wrap_content"
+            android:layout_width="@dimen/tool_bar_button_width"
+            android:contentDescription="@string/str_folder_next"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/folder_next"
+            android:onClick="onClick"
+            android:text="@string/str_folder_next" />
+    </LinearLayout>
+
+</HorizontalScrollView>
+<!-- -->
