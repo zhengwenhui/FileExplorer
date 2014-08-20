@@ -25,49 +25,49 @@ import android.graphics.drawable.Drawable;
  */
 class FileInfo {
 
-    public File file;
-    
-     /**
-     * The application icon.
-     */
-    public Drawable icon;
+	public File file;
 
-    /**
-     * 0: folder    1: file
-     */
-    public boolean isDir;
-    
-    /**
-     * 用来标志是哪种类型的文件，只有当是文件是才有用到，文件夹时此标志无效
-     * */
-    public String file_type;
+	/**
+	 * The application icon.
+	 */
+	public Drawable icon;
 
-    public boolean isRead;
-    public boolean isWrite;
-    
-    public boolean isChoice;
-    
-    FileInfo() {
-    	isDir = true;
-    	file = null;
-    	icon = null;
-    	file_type = null;
-    	isChoice = false;
-	isRead = true;
-	isWrite = true;
-    }
-    
-    public FileInfo(FileInfo info) {    	
-        icon = info.icon;
-        isDir = info.isDir;
-        file = info.file;
-        file_type = info.file_type;
-        isChoice = info.isChoice;
-	isRead = info.isRead;
-	isWrite = info.isWrite;
-    }
-    
-    public String toString() {
-        return file.getPath();
-    }
+	/**
+	 * 0: folder    1: file
+	 */
+	public boolean isDir;
+
+	/**
+	 * 用来标志是哪种类型的文件，只有当是文件是才有用到，文件夹时此标志无效
+	 * */
+	public String file_type;
+
+	public boolean isRead;
+	public boolean isWrite;
+
+	public boolean isChoice;
+
+	FileInfo() {
+		isDir = true;
+		file = null;
+		icon = null;
+		file_type = null;
+		isChoice = false;
+		isRead = true;
+		isWrite = true;
+	}
+
+	public FileInfo(FileInfo info) {    	
+		icon = info.icon;
+		isDir = info.isDir;
+		file = info.file;
+		file_type = info.file_type;
+		isChoice = info.isChoice;
+		isRead = info.isRead;
+		isWrite = info.isWrite;
+	}
+
+	public String toString() {
+		return file.getPath();
+	}
 }

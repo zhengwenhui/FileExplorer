@@ -1,32 +1,29 @@
 package com.android.file.explorer;
 
 import java.lang.ref.WeakReference;
-import android.app.Service;
-import android.os.IBinder;
-import android.os.PowerManager;
-import android.content.Intent;
-import java.util.ArrayList;
-import android.widget.TextView;
 
-import android.content.BroadcastReceiver;
-import android.content.IntentFilter;
-import android.content.Context;
-import android.net.Uri;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.ViewGroup.LayoutParams;
 import android.app.Dialog;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.app.Service;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Handler;
-import android.widget.RemoteViews;
-import android.widget.Toast;
+import android.os.IBinder;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.RemoteViews;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class CopyService extends Service {
 	private final static String TAG = "CopyService";
@@ -212,15 +209,15 @@ public class CopyService extends Service {
 								(int) percent, false);
 						notificationManager.notify(0, progressNotification);
 						LOG(" ____------------>  mHandler(),    percent = " + percent + "    "
-                                                               + CopyFileUtils.cope_now_targetFile.length());
-                                                LOG("speed is high: " + (CopyFileUtils.mIsHighSpeed?"yes":"no"));
+								+ CopyFileUtils.cope_now_targetFile.length());
+						LOG("speed is high: " + (CopyFileUtils.mIsHighSpeed?"yes":"no"));
 
 					}
 				}
 				if (CopyFileUtils.mRecoverFile != null) {
 					if (mRecoverDialog == null
 							|| (mRecoverDialog != null && !mRecoverDialog
-									.isShowing())) {
+							.isShowing())) {
 						mRecoverDialog = null;
 						mRecoverDialog = new Dialog(CopyService.this);
 						mRecoverDialog.getWindow().requestFeature(
@@ -228,12 +225,12 @@ public class CopyService extends Service {
 						View vb = View.inflate(CopyService.this,
 								R.layout.recover_dialog_layout, null);
 						vb.findViewById(R.id.recover_dialog_ok)
-								.setOnClickListener(mOnClickListener);
+						.setOnClickListener(mOnClickListener);
 						vb.findViewById(R.id.recover_dialog_cancel)
-								.setOnClickListener(mOnClickListener);
+						.setOnClickListener(mOnClickListener);
 						((TextView) (vb.findViewById(R.id.recover_dialog_text)))
-								.setText(CopyFileUtils.mRecoverFile
-										+ getString(R.string.copy_revocer_text));
+						.setText(CopyFileUtils.mRecoverFile
+								+ getString(R.string.copy_revocer_text));
 						mRecoverDialog.setContentView(vb);
 						mRecoverDialog.setCanceledOnTouchOutside(false);
 						mRecoverDialog.getWindow().setType(
@@ -243,7 +240,7 @@ public class CopyService extends Service {
 				}
 				this.sendEmptyMessageDelayed(0, 500);
 			} else {
-				
+
 				LOG("CopyService.java--handler--else");
 				copystatus = COPY_STATUS_IDLE;
 				notificationManager.cancel(0);

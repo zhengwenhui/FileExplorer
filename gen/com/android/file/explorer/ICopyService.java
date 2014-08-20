@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: D:\\Program Files\\Dropbox\\Program Files\\workspace\\FileExplorer\\src\\com\\android\\file\\explorer\\ICopyService.aidl
+ * Original file: C:\\Users\\Administrator\\git\\FileExplorer\\src\\com\\android\\file\\explorer\\ICopyService.aidl
  */
 package com.android.file.explorer;
 public interface ICopyService extends android.os.IInterface
